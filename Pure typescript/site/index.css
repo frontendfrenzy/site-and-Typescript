@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --text-color:#000000;
+    --main-color:rgba(215, 84, 28, 0.953);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 100px;
+    backdrop-filter: blur(10px);
+}
+.logo{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.logo span{
+    color: var(--main-color);
+    text-shadow: 2px 2px 3px black;
+}
+.navbar{
+    position: relative;
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    text-shadow: 2px 2px 3px black;
+    font-weight: 500;
+    color: white;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+section{
+    padding: 50px 10%;
+}
+.home{
+    width:100%;
+    min-height: 100vh;
+    background-image: url('https://i.ibb.co/VYLc2WC/sofa-interior-pillow-library-wallpaper-preview.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    align-items: center;
+}
+.home-text{
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.home-text h1{
+    font-size: 2.7rem;
+}
+.home-text p{
+    font-size: 0.938rem;
+    margin: 0.4rem 0 1.8rem;
+    color: white;
+}
+.home-text span{
+    color: var(--main-color);
+    text-shadow: 2px 2px 3px black;
+}
+.btn{
+    padding: 10px 14px;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 0.3rem;
+    font-size: 14px;
+}
+.btn:hover{
+    background: #db6b4f;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.heading span{
+    color: var(--main-color);
+}
+.box-image{
+    overflow: hidden;
+}
+.box-image img{
+    border-radius: 10px;
+    width: 260px;
+    margin:10px;
+    object-fit: cover;
+    transition: transform .4s ease-in;
+}
+.box-image:hover img{
+    transform: scale(1.2);
+    border-radius: 10px;
+}
+.title-price h3{
+    font-size: 14px;
+}
+.stairs{
+    font-size: 14px;
+    color: #0c151f;
+}
+.title-price {
+   display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+.shop-container,.new-container{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.cart{
+  transform: translateX(80%);
+  margin: 7px;
+}
+.cart span{
+    color: var(--main-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+.cart span:hover{
+    text-decoration: underline;
+}
+
+.new-container .box{
+    border-radius: 4px;
+}
+.about-img img{
+    width: 150PX;
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform .4s ease-in;
+} 
+.about-img:hover img{
+    transform: scale(1.2);
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-text p{
+   margin: 20px;
+}
+.brands-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,auto));
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.brands-container img{
+    width: 100px;
+    cursor: pointer;
+    filter: grayscale(1);
+}
+.brands-container img:hover{
+    width: 100px;
+    filter: grayscale(0);
+}
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://i.ibb.co/5BXwMtx/OIP-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.newsletter h2{
+    color: white;
+
+}
+.news-box{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.news-box input{
+    width: 260px;
+    height: 44px;
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 10px;
+}
+.news-box .btn{
+    height: 44px;
+    padding: 11px;
+    border-radius: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    column-count: 3;
+    color: #fef8f8;
+    padding: 30px 0;
+    margin-top: 50px;
+    background-color: rgb(0, 0, 0);
+}
+.footer h4{
+   color: #ffe1e1;
+    font-weight: 600;
+}
+.icons .fa-brands{
+    color: white;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.icons .fa-solid{
+    color: white;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.fa-regular{
+    color: rgb(255, 0, 136);
+}
+#menu-icon{
+    display: none;
+}
+@media(max-width:480px){
+    .expl{
+        flex-direction: row;
+        font-size: 12px;
+    }
+    .expl p{
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media(max-width:480px){
+  header{
+    padding: 11px 4%;
+  }
+  #menu-icon{
+    display: initial;
+  }
+  header .navbar{
+    position: absolute;
+    top: -500px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 4px rgb(0 0 0 /10%);
+    transition: 0.2s ease;
+    text-align: center;
+  }
+  .navbar a{
+    padding: 1.5rem;
+    display: block;
+  }
+  .navbar:active{
+    top: 100%;
+
+  }
+  .navbar a:hover{
+    background: var(--main-color);
+    color: white;
+  }
+}
