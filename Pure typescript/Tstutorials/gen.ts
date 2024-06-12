@@ -1,66 +1,53 @@
 //Generic
-function getFirstelement<ElementType>(array:ElementType[]){
-    return array[0]
+//GENERIC FUNCTIONS
+function identy<T>(arg:T):T{
+    return arg;
 }
+let output1 = identy<string>("hello,world");
+let output2 = identy<number>(100);
 
-const numbers = [1,2,3]
-const firstNum = getFirstelement<number>(numbers);
+console.log(output1);
+//hello world
+console.log(output2);
+//100
 
-const strings = ["hello","welcome","how are you!"];
-const firststrings = getFirstelement<string>(strings)
+//GENERIC CLASSES
+class genericnum<T>{
+    zerovalue:T;
+    add:(x:T,y:T) => T;
 
-const boolean = [true,false,true];
-const firstboolean = getFirstelement<boolean>(boolean);
-
-//example
-const A:number[] = [1,2,3];
-A.map(()=>{
-    return "hello"
-})
-
-//ex2
-const map = new Map<string, number>()
-map.set("hello",3)
-
-
-
-
-/*
-//generic advanced concept
-type ApiResponces<Data = {status:number}> = {
-    data:Data
-    isError:boolean
+    constructor(zerovalue:T,addFruction:(x:T,y:T)=>T){
+           this.zerovalue = zerovalue;
+           this.add = addFruction;
+    }
 }
-//const Responces:ApiResponces<{name:string,age:number}>
-type Userresponces = ApiResponces<{name:string,age:number}>
-type blogresponces = ApiResponces<{title:string}>
-type statusresponces = ApiResponces<{status:number}>
-const Responces: Userresponces = {
-    data:{
-         name:"faleel",
-         age:19,
-    },
-    isError:false,
-}
+let mygeneric = new genericnum<number>(0,(x,y)=>x+y);
+console.log(mygeneric.add(5,10));
+//output: 15
 
-const Responcesblog: blogresponces = {
-    data:{
-        title:"hola"
-    },
-    isError:false,
-}*/
 
-//type ApiResponces<Data  = {status:number}>
-type ApiResponces<Data extends object = {status:number}> ={
-    data:Data,
-    isError:boolean
+//GENERIC INTERFACE AND TYPE ALSO SAME CONCEPT
+interface lengthwise {
+    length:number;
 }
+function loglength<T extends lengthwise>(arg:T):T{
+    console.log(arg.length);
+    return arg;
+    // return --> 10 ---> output
+}
+loglength({length:10});
 
-//const responces: ApiResponces<{name:string,}>
-//const responces: ApiResponces<{name:string}>
-const responces: ApiResponces = {
-    data:{
-           status:200,
-    },
-    isError:false,
+
+//GENERIC ARRAY CONCEPT
+function getarray<T>(items:T[]):T[]{
+    return new Array<T>().concat(items);
 }
+let numarray = getarray<number>([1,2,3,4]);
+let stringarray = getarray<string>(["hello","hi","how are you"]);
+ numarray.push(5);
+ console.log(numarray);
+ //output --> [1,2,3,4,5];
+ stringarray.push("!");
+ console.log(stringarray);
+ //output --> ["heelo","hi","how are you","!"];
+
