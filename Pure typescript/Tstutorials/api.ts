@@ -50,3 +50,13 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
         console.error('There was a problem with the fetch operation:', error);
         // Handle errors here
     });
+
+
+
+//array and object ----> finished
+//function ----> finished
+//type ----> finished
+//interface ----> finished
+//class ----> finished
+//generic ----> intermident level
+//module ----> finished
